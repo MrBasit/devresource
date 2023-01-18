@@ -1,0 +1,31 @@
+<div id="side-nav">
+  <div class="input-control">
+    <input type="text" placeholder="Search" class="ctrl-input" 
+    #InputCtrl (keyup.enter)="filter(InputCtrl.value)">
+  </div>
+  <div class="side-nav-container">
+    <div class="upper">
+      <div *ngFor="let item of subcategories">
+        <p class="category" [ngStyle]="{'margin-top':subcategories.length > 1 ? '30px' : ''}">{{item.name}}</p>
+        
+        <div *ngFor="let itm of item.categories" class="sub-categories">
+          <a href='{{itm.url}}' target="_blank" 
+            *ngIf="subcategories.indexOf(item) == 0; 
+            else categories">
+            <p class="name">{{itm.name}}</p>
+            <mat-icon>open_in_new</mat-icon>
+          </a>
+          <ng-template #categories>
+            <p class="name" >{{itm.name}}</p>
+          </ng-template>
+        </div> 
+
+    </div>
+    <div class="lower">
+      <hr aria-orientation="horizontal">
+      <p>Total Resources:</p><span>738</span>
+    </div>
+  </div>
+</div>
+
+

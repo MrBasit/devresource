@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    font-family: Roboto Mono, system-ui, sans-serif;
+}
+
+html, body { height: 100%;}
+body { margin: 0; }
+
+a, h1, h2, h3, p, span{
+    text-decoration: none;
+    color: #fff;
+    font-family: Roboto Mono, system-ui, sans-serif;
+}

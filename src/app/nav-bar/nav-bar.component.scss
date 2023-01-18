@@ -1,0 +1,24 @@
+mat-toolbar{
+    position: sticky;
+    top:0;
+    background-color: #0D0E12;
+    .nav-bar-container{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex: auto;
+        .nav-bar-left{
+            display: flex;
+            gap: 2rem;
+            flex: auto;
+        }
+        .nav-bar-right{
+            display: flex;
+            gap: 2rem;
+
+            .btn-add-resources{
+                background-color: #144BB8;;
+            }
+        }
+    }
+}

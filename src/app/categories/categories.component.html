@@ -1,0 +1,45 @@
+<div id="categories">
+    <div class="categories-container"  *ngFor="let item of cardContent">
+        <div class="categories-heading">
+            <h1>{{item.subCategory}}</h1>
+            <span>{{item.category}}</span>
+        </div>
+        <!-- <input type="text"> -->
+
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="card-container">
+                        <div class="card" *ngFor="let card of item.card">
+                            <mat-card>
+                                <img style="border-radius: 1rem; height: 220px;" 
+                                mat-card-image src='{{card.image}}' alt="Photo of a Shiba Inu">
+                                
+                                <mat-card-content>
+                                  <div class="card-content">
+                                    <div class="card-h2">
+                                       <h2>{{card.type}}</h2> 
+                                    </div>
+                                    <span>{{card.path}}</span>
+                                    <div class="discription">
+                                        <p>{{card.discription}}
+                                        </p>
+                                    </div>
+                                    
+                                  </div>
+                                
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <mat-icon>more_horiz</mat-icon>
+                                </mat-card-actions>
+                              </mat-card>
+
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
