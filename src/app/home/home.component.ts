@@ -1,38 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import '../modals/categories';
+import { Component } from '@angular/core';
 import { FilterqueryService } from '../services/filterquery.service';
+
 @Component({
-  selector: 'categories',
-  templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.scss']
+  selector: 'home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class CategoriesComponent implements OnInit{
+export class HomeComponent {
 
-  cardContent: Categories[];
-  filteredCategories?: Categories[];
-
-  constructor(private queryService: FilterqueryService ){
-    this.cardContent = CardContent;
+ 
+  dataSource;
+  constructor(private service: FilterqueryService){
+    this.dataSource = CardContent;
   }
 
-  ngOnInit(): void {
-    this.filter();
-  }
-
-  filter(){
-    this.queryService.query$.subscribe((query: any) => {
-    this.filteredCategories =  this.cardContent.filter(val=> {
-      console.log(val)
-       return val.subCategory?.toLowerCase() == query.toLowerCase();
-    });
-    })
-  }
 }
 
 const CardContent: Categories[] = [
   {
     subCategory: 'icons',
     category: 'assets',
+    date: Date.now().toString(),
     card: [
       {
       image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
@@ -57,37 +45,55 @@ const CardContent: Categories[] = [
             type: 'icons',
             path: 'assets/icon',
             discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-            }
+            },
+            {
+              image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+              type: 'icons',
+              path: 'assets/icon',
+              discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
+              }
   ]
 },
 {
   subCategory: 'Assets',
   category: 'assets',
+  date: Date.now().toString(),
   card: [
     {
     image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     type: 'icons',
     path: 'assets/icon',
     discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-    },
+    }
+    ,
     {
       image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
       type: 'icons',
       path: 'assets/icon',
       discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-      },
-    {
-    image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    type: 'icons',
-    path: 'assets/icon',
-    discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-    },
+      }
+    ,
     {
       image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
       type: 'icons',
       path: 'assets/icon',
       discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-      },
+      }
+    ,
+    {
+      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      type: 'icons',
+      path: 'assets/icon',
+      discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
+      }
+    ,
+    {
+      image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+      type: 'icons',
+      path: 'assets/icon',
+      discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
+      }
+    ,
     {
       image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
       type: 'icons',
@@ -99,31 +105,8 @@ const CardContent: Categories[] = [
 {
   subCategory: 'Music',
   category: 'assets',
+  date: Date.now().toString(),
   card: [
-    {
-    image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    type: 'icons',
-    path: 'assets/icon',
-    discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-    },
-    {
-    image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    type: 'icons',
-    path: 'assets/icon',
-    discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-    },
-    {
-    image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    type: 'icons',
-    path: 'assets/icon',
-    discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-    },
-    {
-    image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
-    type: 'icons',
-    path: 'assets/icon',
-    discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur'
-    },
     {
     image: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     type: 'icons',

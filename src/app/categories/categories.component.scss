@@ -30,8 +30,10 @@
                 padding: 0;
 
                 .card-container{
-                    display: inline-flex;
-                    gap: 1.5rem;
+                    display: grid;
+                    grid-gap: 1.5rem;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    padding: 0;
                     mat-card{
                         background-color: #16191d;
                         border: 2px solid #202328;

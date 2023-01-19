@@ -5,8 +5,9 @@ interface DevResources {
 }
 
 interface Categories{
-    subCategory: string,
-    category: string,
+    subCategory?: string,
+    category?: string,
+    date?: string; 
     card: Card[];
 }
 

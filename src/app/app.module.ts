@@ -16,13 +16,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CategoriesComponent } from './categories/categories.component';
 import {MatCardModule, MatCardTitle} from '@angular/material/card';
+import { HomeComponent } from './home/home.component';
+import { NewwebsiteComponent } from './dialogform/newwebsite/newwebsite.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
     SideNavComponent,
     NavBarComponent,
     MainComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    HomeComponent,
+    NewwebsiteComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,13 @@ import {MatCardModule, MatCardTitle} from '@angular/material/card';
     MatFormFieldModule,
     FontAwesomeModule,
     MatCardModule,
-    MatIconModule 
+    MatIconModule,
+    MatDialogModule,
+    MatAutocompleteModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
     
   ],
   providers: [],

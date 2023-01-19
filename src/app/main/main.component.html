@@ -4,7 +4,10 @@
             <side-nav></side-nav>
         </div>
         <div class="categories">
-            <categories></categories>
+            <home *ngIf="query == null; else categories"></home>
+            <ng-template #categories>
+                <categories></categories>
+            </ng-template>
         </div>
     </div>
 </div>
