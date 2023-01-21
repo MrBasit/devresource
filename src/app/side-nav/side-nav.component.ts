@@ -61,7 +61,9 @@ export class SideNavComponent implements AfterViewInit, OnInit{
   filter(query: string){
     this.services.setQuery(query);
   }
-
+  childClick(nodeName:string){
+    this.filter(nodeName);
+  }
   
 }
 
