@@ -1,3 +1,5 @@
+// @import '../../responsive/Desktop.scss';
+
 #categories{
     display: flex;
     flex-direction: column;
@@ -98,6 +100,21 @@
                 }
 
                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1327px) and (min-width: 1024px){
+    home{
+
+        #home{
+            ul{
+                border: 2px solid red;
+                display: grid;
+                grid-gap: 1.5rem;
+                grid-template-columns: 1fr 1fr;
+                padding: 0;
             }
         }
     }

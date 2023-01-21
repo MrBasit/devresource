@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import '../modals/categories';
 import { FilterqueryService } from '../services/filterquery.service';
 @Component({
+
   selector: 'categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss']
@@ -13,10 +14,11 @@ export class CategoriesComponent implements OnInit{
 
   constructor(private queryService: FilterqueryService ){
     this.cardContent = CardContent;
+    this.filter();
   }
 
   ngOnInit(): void {
-    this.filter();
+    
   }
 
   filter(){

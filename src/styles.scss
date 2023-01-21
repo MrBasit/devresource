@@ -19,7 +19,6 @@
 // }
 
 
-@import url(./responsive/Desktop.scss);
 :root{
     font-family: Roboto Mono, system-ui, sans-serif;
 }
@@ -34,3 +33,12 @@ a, h1, h2, h3, p, span{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media screen{
+    @import './responsive/Desktop.scss';
+    @import './responsive/Tablet.scss';
+    @import './responsive/Mobile.scss';
+
+}
+
