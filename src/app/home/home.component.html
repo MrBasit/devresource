@@ -1,22 +1,23 @@
 <div id="home">
     <div class="home-container">
         <div class="categories">
-            <div class="category" *ngFor="let item of dataSource">
-                <h1>{{item.date | date:'d LLLL' }}</h1>
+            <div class="category" *ngFor="let item of sortedData">
+                <!-- <h1>{{i.date | date:'d LLLL' }}</h1> -->
+                <h1>{{item[0].date | date:'d LLLL y' }}</h1>
                 <ul>
-                    <li *ngFor="let item of item.card">
+                    <li *ngFor="let i of item">
                         <mat-card>
                             <img style="border-radius: 1rem; height: 220px;" 
-                            mat-card-image src='{{item.image}}' alt="Photo of a Shiba Inu">
+                            mat-card-image src='{{i.image}}' alt="Photo of a Shiba Inu">
                             
                             <mat-card-content>
                               <div class="card-content">
                                 <div class="card-h2">
-                                   <h2>{{item.type}}</h2> 
+                                   <h2>{{i.type}}</h2> 
                                 </div>
-                                <span>{{item.path}}</span>
+                                <span>{{i.path}}</span>
                                 <div class="discription">
-                                    <p>{{item.discription}}</p>
+                                    <p>{{i.discription}}</p>
                                 </div>
                                 
                               </div>
