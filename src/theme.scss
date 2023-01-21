@@ -1,0 +1,16 @@
+@import "../node_modules/@angular/material/theming";
+
+@include mat-core();
+
+// $mat-primary: #16191d;
+
+$my-primary: mat-palette($mat-grey, 800);
+$dialog-theme: mat-light-theme($my-primary);
+
+@include angular-material-theme($dialog-theme);
+
+.dark-theme{
+    // $my-orange: mat-pallete($mat-deep-orange, 800);
+    // $dialog-orange: mat-light-theme($my-orange);
+    @include angular-material-theme($dark-theme);
+}

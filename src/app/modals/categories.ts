@@ -1,5 +1,5 @@
 interface DevResources {
-    name?: string;
+    name: string;
     url?: string;
     categories?:  DevResources[];
 }

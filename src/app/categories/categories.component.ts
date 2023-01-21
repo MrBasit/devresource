@@ -21,7 +21,8 @@ export class CategoriesComponent implements OnInit{
 
   filter(){
     this.queryService.query$.subscribe((query: any) => {
-    this.filteredCategories =  this.cardContent.filter(val=> {
+
+    this.filteredCategories =  this.cardContent.filter(val=> { 
       console.log(val)
        return val.subCategory?.toLowerCase() == query.toLowerCase();
     });

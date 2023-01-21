@@ -1,60 +1,56 @@
 <div class="" id="dialog">
     <div class="dialog-container">
         <h1 mat-dialog-title>Add New Website</h1>
-        <div mat-dialog-content>
-            <form class="form">
-                <mat-form-field class="form-field" appearance="fill">
-                  <mat-label>Select dropdown</mat-label>
-                  <input type="text"
-                         aria-label="Number"
-                         matInput
-                         [formControl]="myControl"
-                         [matAutocomplete]="auto">
-                         <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
-                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                      {{option}}
-                    </mat-option>
-                </mat-autocomplete>
+        <mat-dialog-content>
+          <form class="form">
+  
+              <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Select dropdown</mat-label>
+                <mat-select>
+                  <mat-option value="one">Assets > Audio</mat-option>
+                  <mat-option value="two">Assets > fonts</mat-option>
+                </mat-select>
+              </mat-form-field>
+      
+              <mat-form-field class="form-field">
+                  <mat-label>Link Edit text</mat-label>
+                  <input type="text" matInput>
+                  <button class="btn-input"mat-button matSuffix mat-stroked-button aria-label="search">
+                      <span><strong>Add</strong></span>
+                  </button>
+              </mat-form-field>
                 
-                </mat-form-field>
-        
+                <hr style="width: 100%;" aria-orientation="horizontal">
+                
+                <h1 style="padding: 0;" mat-dialog-title>Details</h1>
                 <mat-form-field class="form-field">
-                    <mat-label>Link Edit text</mat-label>
-                    <input type="text" matInput>
-                    <button class="btn-input"mat-button matSuffix mat-stroked-button aria-label="search">
-                        <span><strong>Add</strong></span>
-                    </button>
+                  <mat-label>Title Edit text</mat-label>
+                  <input autocomplete="off" type="text" matInput>
+                  <!-- <button mat-button matSuffix mat-stroked-button aria-label="search">
+                      <span><strong>add</strong></span>
+                  </button> -->
                 </mat-form-field>
-                  
-                  <hr style="width: 100%;" aria-orientation="horizontal">
-                  
-                  <h1 style="padding: 0;" mat-dialog-title>Add New Website</h1>
-                  <mat-form-field class="form-field">
-                    <mat-label>Title Edit text</mat-label>
-                    <input autocomplete="off" type="text" matInput>
-                    <!-- <button mat-button matSuffix mat-stroked-button aria-label="search">
-                        <span><strong>add</strong></span>
-                    </button> -->
-                  </mat-form-field>
-
-                  <mat-form-field class="form-field">
-                    <mat-label>Discription Edit Text</mat-label>
-                    <input type="text" matInput>
-                    <!-- <button mat-button matSuffix mat-stroked-button aria-label="search">
-                        <span><strong>add</strong></span>
-                    </button> -->
-                  </mat-form-field>
-            </form>
-          
-        </div>
-        <div mat-dialog-actions align="center" >
-            <button mat-raised-button  mat-button cdkFocusInitial color="primary">Add</button>
-            <button mat-raised-button color="primary" mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancel</button>
-            <!-- <button mat-button cdkFocusInitial style="color: #000;">Add</button>
-            <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancel</button> -->
-        </div>
-
-    </div>
+  
+                <mat-form-field class="form-field">
+                  <mat-label>Discription Edit Text</mat-label>
+                  <input type="text" matInput>
+                  <!-- <button mat-button matSuffix mat-stroked-button aria-label="search">
+                      <span><strong>add</strong></span>
+                  </button> -->
+                </mat-form-field>
+  
+                <mat-card >
+                  <mat-card-content>
+                    <h1>select image</h1>
+                    <img src="" alt="">
+                  </mat-card-content>
+                </mat-card>
+          </form>
+        </mat-dialog-content>
+        <mat-dialog-actions align="center">
+          <button mat-raised-button  mat-button cdkFocusInitial color="primary">Add</button>
+          <button mat-raised-button color="primary" mat-button [mat-dialog-close]="true" cdkFocusInitial>Cancel</button>
+        </mat-dialog-actions>
+      </div>
 </div>
 

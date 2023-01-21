@@ -1,8 +1,14 @@
 #app-container{
     background-color: #0D0E12;
     .main-container{
+        // display: flex;
+        // flex-direction: column;
         min-height: 100vh;
-        margin: 0 150px;
+        max-width: 1600px;
+        -webkit-margin-start: auto;
+        margin-inline-start: auto;
+        -webkit-margin-end: auto;
+        margin-inline-end: auto;
 
     }
 

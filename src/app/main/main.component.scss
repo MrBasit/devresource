@@ -5,8 +5,12 @@
         display: flex;
         .side-nav{
             display: flex;
-            width: 20%;
-            margin-right: 50px;
+            min-width: 270px;
+            max-width: 270px;
+            height: calc(100vh - calc(76px + 30px));
+            side-nav{
+                position: fixed;
+            }
         }
     
         .categories{

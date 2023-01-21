@@ -23,6 +23,8 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
+import { ManagewebsiteComponent } from './dialogform/managewebsite/managewebsite.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import {MatInputModule} from '@angular/material/input';
     MainComponent,
     CategoriesComponent,
     HomeComponent,
-    NewwebsiteComponent
+    NewwebsiteComponent,
+    ManagewebsiteComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule,
     ReactiveFormsModule,
     MatCheckboxModule,
+    MatSelectModule
     
   ],
   providers: [],

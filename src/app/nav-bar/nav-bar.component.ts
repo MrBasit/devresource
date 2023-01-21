@@ -1,21 +1,34 @@
-import { Component } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { ManagewebsiteComponent } from '../dialogform/managewebsite/managewebsite.component';
 import { NewwebsiteComponent } from '../dialogform/newwebsite/newwebsite.component';
+import { FilterqueryService } from '../services/filterquery.service';
 @Component({
   selector: 'nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
 
   dialogRef!: MatDialog;
-  constructor(private dialog: MatDialog){}
+  dialogData!: DevResources[];
+  constructor(private dialog: MatDialog, private services: FilterqueryService){}
+  
+  ngOnInit(): void {
+    this.services.categoriesDataSource$.subscribe(x => {
+      this.dialogData = x;
+    })
+  }
 
   openDialog(){
-     const dialog = this.dialog.open(NewwebsiteComponent,{
-      width: '30%',
-      height: '60vh'
-     });
+     const dialog = this.dialog.open(NewwebsiteComponent);
+  }
+
+  openDialog2(){
+    const dialog = this.dialog.open(ManagewebsiteComponent, {
+      width: '35%',
+      data: this.dialogData
+    });
   }
 
 

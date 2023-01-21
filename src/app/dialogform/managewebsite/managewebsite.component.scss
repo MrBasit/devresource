@@ -1,0 +1,62 @@
+#dialog{
+    .dialog-container{
+        padding: 1rem;
+        h1{
+            color: #000;
+            font-weight: 600;
+        }
+
+        mat-dialog-content{
+
+            .example-form {
+                min-width: 150px;
+                max-width: 500px;
+                width: 100%;
+              }
+              .parent-input-ctrl{
+                width: 100%;
+              }
+              .parent-width {
+                width: 91%;
+              }
+              
+
+              .sub-categories{
+                margin-bottom: 2rem;
+                width: 100%;
+
+                .child{
+                    
+                    .child-input-ctrl{
+                      display: flex;
+                      justify-content: end;
+                      align-items: center;
+                    }
+                    .child-width{
+                      width:70%;
+                    }
+                  }
+                  
+                  .btnctrl{
+                    display: flex;
+                    justify-content: end;
+  
+                    button{
+                        width: 77.5%;
+                    }
+                  }
+                }
+            }
+
+            .add-new-ctrl{
+                width: 100%;
+              }
+        }
+
+
+        mat-dialog-actions{
+            button{
+               
+            }
+        }
+    }
