@@ -1,4 +1,9 @@
 mat-toolbar{
+    height: 80px;
+    -webkit-padding-start: 30px;
+    padding-inline-start: 30px;
+    -webkit-padding-end: 30px;
+    padding-inline-end: 30px;
     position: sticky;
     top:0;
     background-color: #0D0E12;
@@ -18,8 +23,58 @@ mat-toolbar{
             gap: 2rem;
 
             .btn-add-resources{
-                background-color: #144BB8;;
+                background-color: #144BB8;
+                strong{
+                    text-transform: uppercase;
+                }
             }
         }
     }
+}
+
+// resposive
+
+@media screen and (max-width: 1328px) and (min-width: 1003px){
+
+    mat-toolbar{
+        .nav-bar-container{
+            .nav-bar-left{
+                gap: 1rem;
+            }
+            .nav-bar-right{
+                gap: 1rem;
+                
+                .btn-add-resources{
+                    strong{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1002px) and (min-width: 768px){
+    mat-toolbar{
+        .nav-bar-container{
+            .nav-bar-left{
+                gap: 1rem;
+            }
+            .nav-bar-right{
+                gap: 1rem;
+                
+                .btn-add-resources{
+                    strong{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) and (min-width: 280px){
+    
 }
