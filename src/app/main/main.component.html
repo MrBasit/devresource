@@ -4,10 +4,8 @@
             <side-nav></side-nav>
         </div>
         <div class="categories">
-            <home *ngIf="query == null; else categories"></home>
-            <ng-template #categories>
-                <categories></categories>
-            </ng-template>
+            <home *ngIf="query == null"></home>
+            <categories *ngIf="query != null"></categories>
         </div>
     </div>
 </div>

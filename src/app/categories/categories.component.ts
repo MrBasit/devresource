@@ -3,6 +3,7 @@ import { HomeComponent } from '../home/home.component';
 import '../modals/categories';
 import { AllCardContent ,FilterqueryService } from '../services/filterquery.service';
 @Component({
+
   selector: 'categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss']
