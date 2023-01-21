@@ -11,9 +11,16 @@ interface Categories{
     card: Card[];
 }
 
+// interface Card {
+//     image: string,
+//     type: string,
+//     path: string,
+//     discription: string
+// }
 interface Card {
     image: string,
     type: string,
     path: string,
-    discription: string
+    discription: string,
+    date:string
 }

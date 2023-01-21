@@ -1,8 +1,9 @@
 <div id="categories">
-    <div class="categories-container"  *ngFor="let item of filteredCategories">
+    <div class="categories-container"  
+        >
         <div class="categories-heading">
-            <h1>{{item.subCategory}}</h1>
-            <span>{{item.category}}</span>
+            <h1>{{filteredCategories[0]?.type}}</h1>
+            <span>{{filteredCategories[0]?.type}}</span>
         </div>
         <!-- <input type="text"> -->
 
@@ -10,7 +11,7 @@
             <ul>
                 <li>
                     <div class="card-container">
-                        <div class="card" *ngFor="let card of item.card">
+                        <div class="card" *ngFor="let card of filteredCategories">
                             <mat-card>
                                 <img style="border-radius: 1rem; height: 220px;" 
                                 mat-card-image src='{{card.image}}' alt="Photo of a Shiba Inu">

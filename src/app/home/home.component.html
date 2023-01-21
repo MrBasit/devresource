@@ -1,31 +1,29 @@
 <div id="home">
     <div class="home-container">
         <div class="categories">
-            <h1><strong>LATEST</strong></h1>
-            <div class="category" *ngFor="let item of dataSource">
-                <h1>{{item.date | date:'d LLLL' }}</h1>
-                    <ul class="list">
-                        <li *ngFor="let item of item.card">
-                            <mat-card>
-                                <img style="border-radius: 1rem; height: 220px;" 
-                                mat-card-image src='{{item.image}}' alt="Photo of a Shiba Inu">
-                                
-                                <mat-card-content>
-                                <div class="card-content">
-                                    <div class="card-h2">
-                                    <h2>{{item.type}}</h2> 
-                                    </div>
-                                    <span>{{item.path}}</span>
-                                    <div class="discription">
-                                        <p>{{item.discription}}</p>
-                                    </div>
-                                    
+            <div class="category" *ngFor="let item of sortedData">
+                <!-- <h1>{{i.date | date:'d LLLL' }}</h1> -->
+                <h1>{{item[0].date | date:'d LLLL y' }}</h1>
+                <ul>
+                    <li *ngFor="let i of item">
+                        <mat-card>
+                            <img style="border-radius: 1rem; height: 220px;" 
+                            mat-card-image src='{{i.image}}' alt="Photo of a Shiba Inu">
+                            
+                            <mat-card-content>
+                              <div class="card-content">
+                                <div class="card-h2">
+                                   <h2>{{i.type}}</h2> 
                                 </div>
-                                
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <mat-icon>more_horiz</mat-icon>
-                                </mat-card-actions>
+                                <span>{{i.path}}</span>
+                                <div class="discription">
+                                    <p>{{i.discription}}</p>
+                                </div>
+                            </div>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <mat-icon>more_horiz</mat-icon>
+                            </mat-card-actions>
                             </mat-card>
                         </li>
                     </ul>
