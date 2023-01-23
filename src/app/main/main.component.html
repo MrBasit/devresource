@@ -1,9 +1,9 @@
 <div id="main">
     <div class="main-container">
-        <div class="side-nav" [ngClass]="{'display-side-nav': isOpen, ' min-max-width': isOpen}">
+        <div class="side-nav" [ngClass]="{'display-side-nav': isOpen, ' min-max-width': isOpen}" #sidenav>
         <!-- [style.width]="true ? '100%' : '' " -->
             <div class="header">
-                    <mat-icon>close</mat-icon>
+                    <mat-icon (click)="close()">close</mat-icon>
             </div>
             <side-nav></side-nav>
         </div>
