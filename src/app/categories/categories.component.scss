@@ -175,3 +175,27 @@
        }
    }
 }
+
+@media screen and (max-width: 768px) and (min-width: 664px){
+    #categories{
+        .categories-container{
+            -webkit-padding-start: 20px;
+            padding-inline-start: 20px;
+            -webkit-padding-end: 20px;
+            padding-inline-end: 20px;
+            .list{
+                ul{
+                    li{
+
+                        display: grid;
+                        grid-gap: 1.5rem;
+                        grid-template-columns: 1fr 1fr;
+                        padding: 0;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}

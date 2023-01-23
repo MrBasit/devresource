@@ -29,6 +29,10 @@ mat-toolbar{
                 }
             }
         }
+
+        .burger-menu{
+            display: none;
+        }
     }
 }
 
@@ -75,6 +79,22 @@ mat-toolbar{
 
 }
 
-@media screen and (max-width: 767px) and (min-width: 280px){
+@media screen and (max-width: 768px) and (min-width: 280px){
+    mat-toolbar{
+
+        .nav-bar-container{
+
+            .nav-bar-right{
+                display: none;
+            }
+
+            .burger-menu{
+                display: block;
+                font-size: 2rem;
+                color: #8E96A4;
+            }
+
+        }
+    }
     
 }

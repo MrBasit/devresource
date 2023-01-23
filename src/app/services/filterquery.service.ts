@@ -8,6 +8,7 @@ export class FilterqueryService {
 
   query$ = new Subject();
   queryText:string="";
+  isOpenSiveNav$ = new Subject();
   categoriesDataSource$ = new Subject<DevResources[]>();
   apiDataSource$ = new Subject<DevResources[]>();
 

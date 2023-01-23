@@ -12,6 +12,7 @@ export class NavBarComponent implements OnInit {
 
   dialogRef!: MatDialog;
   dialogData!: DevResources[];
+  isOpen: boolean;
   constructor(private dialog: MatDialog, private services: FilterqueryService){}
   
   ngOnInit(): void {
@@ -30,6 +31,13 @@ export class NavBarComponent implements OnInit {
       data: this.dialogData
     });
   }
+
+  OpenSideNav(){
+    this.services.isOpenSiveNav$.next(!this.isOpen);
+  }
+  
+
+  
 
 
 }

@@ -16,7 +16,7 @@ import { MatCardTitleGroup } from '@angular/material/card';
 export class SideNavComponent implements AfterViewInit, OnInit{
 
   @ViewChild('InputCtrl') inputElement!: HTMLInputElement;
-
+ 
   apis;
 
   private _transformer = (node: DevResources, level: number) => {
@@ -46,11 +46,15 @@ export class SideNavComponent implements AfterViewInit, OnInit{
   constructor(private services: FilterqueryService){
     this.apis = APIs;
     this.dataSource.data =  categories;
+    
   }
 
   ngOnInit(): void {
     this.services.setCategories(categories)
     this.services.setAPI(APIs)
+
+    
+    
   }
 
   ngAfterViewInit(): void {

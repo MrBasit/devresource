@@ -6,17 +6,53 @@
         .side-nav{
             display: flex;
             min-width: 270px;
-            max-width: 270px;
+            max-width: 270px;   
             height: calc(100vh - calc(76px + 30px));
             margin-right: 50px;
             side-nav{
                 position: fixed;
             }
         }
-    
-        .categories{
-            
-        }  
       }
 
+}
+
+@media screen and (max-width: 768px) and (min-width: 280px){
+    #main{
+        
+        .main-container{
+            
+            .side-nav{
+                min-width: 0px;
+                max-width: 0px;   
+                height: 0px;
+                margin-right: 0px;
+                
+            }
+            .min-max-width{
+                max-width: 100%;
+                width: 100%;
+            }
+            .display-side-nav{
+                display: flex;
+                flex-direction: column;
+                background: #0D0E12;
+                height: 100vh;
+                overflow: auto;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                padding-inline-start:1rem;
+                padding-inline-end: 1rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                z-index: 100;
+            }
+
+            .categories{
+                position: fixed;
+            }
+
+        }
+    }
 }

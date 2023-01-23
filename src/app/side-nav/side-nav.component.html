@@ -1,4 +1,7 @@
 <div id="side-nav">
+  <div class="close">
+    <mat-icon>close</mat-icon>
+  </div>
   <div class="input-control">
     <input type="text" placeholder="Search" class="ctrl-input" 
     #InputCtrl (keydown.enter)="filter(InputCtrl.value)">

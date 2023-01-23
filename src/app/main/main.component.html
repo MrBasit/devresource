@@ -1,6 +1,6 @@
 <div id="main">
     <div class="main-container">
-        <div class="side-nav">
+        <div class="side-nav" [ngClass]="{'display-side-nav': isOpen, ' min-max-width': isOpen}"  [style.width]="true ? '100%' : '' ">
             <side-nav></side-nav>
         </div>
         <div class="categories">
