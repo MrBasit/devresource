@@ -4,6 +4,10 @@
         width: 100%;
         display: flex;
         .side-nav{
+
+            .header{
+                display: none;
+            }
             display: flex;
             min-width: 270px;
             max-width: 270px;   
@@ -23,10 +27,19 @@
         .main-container{
             
             .side-nav{
+                display: none;
                 min-width: 0px;
                 max-width: 0px;   
                 height: 0px;
                 margin-right: 0px;
+                .header{
+                    display: flex;
+                    justify-content: end;
+
+                    mat-icon{
+                        color: #fff;
+                    }
+                }
                 
             }
             .min-max-width{

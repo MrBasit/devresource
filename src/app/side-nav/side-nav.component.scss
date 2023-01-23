@@ -1,7 +1,7 @@
 #side-nav{
-  .close{
-    display: none;
-  }
+  // .close{
+  //   display: none;
+  // }
   
   .input-control{
     padding: 30px 20px 20px 30px;
@@ -120,12 +120,13 @@
 
 @media screen and (max-width: 768px) and (min-width: 280px){
   #side-nav{
-    .close{
-      mat-icon{
-        color: #fff;
+    // display: none;
+    // .close{
+    //   mat-icon{
+    //     color: #fff;
 
-      }
-    }
+    //   }
+    // }
   }
   }
 

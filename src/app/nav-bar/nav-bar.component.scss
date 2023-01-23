@@ -81,6 +81,10 @@ mat-toolbar{
 
 @media screen and (max-width: 768px) and (min-width: 280px){
     mat-toolbar{
+        -webkit-padding-start: 20px;
+        padding-inline-start: 20px;
+        -webkit-padding-end: 20px;
+        padding-inline-end: 20px;
 
         .nav-bar-container{
 
