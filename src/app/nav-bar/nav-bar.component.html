@@ -1,5 +1,6 @@
 <mat-toolbar>
     <div class="nav-bar-container">
+        
         <div class="nav-bar-left">
             <a href="/" class="dev-resource">
                 <span>
@@ -18,14 +19,18 @@
              </button>
              <button mat-raised-button class="btn-add-resources" (click)="openDialog()">
                 <strong>ADD RESOURCES</strong>
-        </button>
+            </button>
             <a href="https://github.com/marcelscruz/dev-resources" class="github">
                 <span>
                 <strong>GITHUB(123)</strong>
                 </span>
             </a>
-            
-            
+        </div>
+
+        <div class="burger-menu">
+            <div>
+                <mat-icon (click)="OpenSideNav()"> menu </mat-icon>
+            </div>
         </div>
         
     </div>

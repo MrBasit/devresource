@@ -1,8 +1,8 @@
 #app-container{
     background-color: #0D0E12;
     .main-container{
-        // display: flex;
-        // flex-direction: column;
+        display: flex;
+        flex-direction: column;
         min-height: 100vh;
         max-width: 1600px;
         -webkit-margin-start: auto;
@@ -10,8 +10,19 @@
         -webkit-margin-end: auto;
         margin-inline-end: auto;
 
+        nav-bar{
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            
+        }
+       
+
     }
 
 }
+
+
 
 
