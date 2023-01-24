@@ -91,7 +91,7 @@ export let AllCardContent:Card[]=[
     type: 'audio',
     path: 'assets/icon',
     discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur',
-    date:"2024-10-21"
+    date:"2024-2-21"
   },
   {
     image: 'https://www.shutterstock.com/image-vector/programming-code-coding-hacker-background-260nw-1714491562.jpg',
