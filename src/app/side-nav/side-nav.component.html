@@ -1,9 +1,12 @@
 <div id="side-nav">
-
-  <div class="input-control">
-    <input type="text" placeholder="Search" class="ctrl-input" 
-    #InputCtrl (keydown.enter)="filter(InputCtrl.value)">
-  </div>
+  
+    <div class="add-resources">
+      <a href="https://devresourc.es/add-resource">Add resources</a>
+    </div>
+    <div class="input-control">
+      <input type="text" placeholder="Search" class="ctrl-input" 
+      #InputCtrl (keydown.enter)="filter(InputCtrl.value)">
+    </div>
   <div class="side-nav-container">
     <div class="upper" style="color: #fff">
       <div *ngFor="let item of apis">

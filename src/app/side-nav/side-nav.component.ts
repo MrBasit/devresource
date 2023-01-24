@@ -52,10 +52,7 @@ export class SideNavComponent implements AfterViewInit, OnInit{
   ngOnInit(): void {
     this.services.setCategories(categories)
     this.services.setAPI(APIs)
-
-    
-    
-  }
+   }
 
   ngAfterViewInit(): void {
     console.log(this.inputElement)

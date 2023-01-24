@@ -27,17 +27,17 @@
         }
         .list{
             ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                padding: 0;
+                
                 li{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2rem;
-                    -webkit-box-align: stretch;
-                    align-items: stretch;
-                    .card-container{
-                        margin-bottom: 3rem;
-                        display: grid;
-                        grid-gap: 1.5rem;
-                        grid-template-columns: 1fr 1fr 1fr;
+                    width: 30%;
+                        // margin-bottom: 3rem;
+                        // display: grid;
+                        // grid-gap: 1.5rem;
+                        // grid-template-columns: 1fr 1fr 1fr;
                         padding: 0;
                         mat-card{
                             background-color: #16191d;
@@ -109,7 +109,6 @@
 
                
             }
-        }
     }
 }
 
@@ -134,13 +133,18 @@
             padding-inline-end: 30px;
             .list{
                 ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    justify-content: space-between;
                     li{
-                        .card-container{
-                            display: grid;
-                            grid-gap: 1.5rem;
-                            grid-template-columns: 1fr 1fr;
-                            padding: 0;
-                        }
+                        width: 47%;                        
+                        // .card-container{
+                        //     display: grid;
+                        //     grid-gap: 1.5rem;
+                        //     grid-template-columns: 1fr 1fr;
+                        //     padding: 0;
+                        // }
 
                     }
 
@@ -160,14 +164,18 @@
         padding-inline-end: 30px;
            .list{
                ul{
+                display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    justify-content: space-between;
                 li{
-                    
-                    .card-container{
-                        display: grid;
-                        grid-gap: 1.5rem;
-                        grid-template-columns: 1fr;
+                    width: 100%; 
+                    // .card-container{
+                    //     display: grid;
+                    //     grid-gap: 1.5rem;
+                    //     grid-template-columns: 1fr;
                         padding: 0;
-                    }
+                    // }
                 }
 
                }
@@ -185,11 +193,43 @@
             padding-inline-end: 20px;
             .list{
                 ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    justify-content: space-between;
                     li{
+                        width: 47%; 
 
-                        display: grid;
-                        grid-gap: 1.5rem;
-                        grid-template-columns: 1fr 1fr;
+                        // display: grid;
+                        // grid-gap: 1.5rem;
+                        // grid-template-columns: 1fr 1fr;
+                        padding: 0;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 664px) and (min-width: 280px){
+    #categories{
+        .categories-container{
+            padding-inline-start: 20px;
+            padding-inline-end: 20px;
+            .list{
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    justify-content: space-between;
+                    li{
+                        width: 100%; 
+
+                        // display: grid;
+                        // grid-gap: 1.5rem;
+                        // grid-template-columns: 1fr 1fr;
                         padding: 0;
                     }
                     

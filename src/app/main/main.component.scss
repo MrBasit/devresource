@@ -1,10 +1,9 @@
 #main{
     
     .main-container {
-        width: 100%;
         display: flex;
         .side-nav{
-
+            
             .header{
                 display: none;
             }
@@ -61,10 +60,11 @@
                 padding-top: 1rem;
                 padding-bottom: 1rem;
                 z-index: 100;
+                position: fixed;
             }
 
             .categories{
-                position: fixed;
+                overflow: hidden;
             }
 
         }

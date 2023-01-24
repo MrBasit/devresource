@@ -30,6 +30,7 @@ export class MainComponent implements OnInit, AfterViewInit {
    }
 
   close(){
+    console.log("click")
     this.sideNav.nativeElement.classList.remove('display-side-nav');
     this.service.isOpenSiveNav$.next(false);
 

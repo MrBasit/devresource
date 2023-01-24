@@ -1,6 +1,8 @@
 #dialog{
+    background-color: #16191d;
     .dialog-container{
         h1{
+            color: #fff;
             font-weight: 600;
         }
         padding: 1rem;
@@ -17,8 +19,8 @@
         align-items: center; 
 
         mat-form-field{
-            > div{
-                border: 2px solid red;
+            input{
+                color: #000;
             }
         }
         .btn-input{

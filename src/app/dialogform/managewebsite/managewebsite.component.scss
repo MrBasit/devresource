@@ -1,20 +1,33 @@
 #dialog{
+  background-color: #16191d;
     .dialog-container{
         padding: 1rem;
         h1{
-            color: #000;
+          display: flex;
+          justify-content: center;
+            color: #fff;
             font-weight: 600;
         }
 
         mat-dialog-content{
+          mat-icon{
+            color: #9ea3ab;
+          }
 
-            .example-form {
-                min-width: 150px;
-                max-width: 500px;
-                width: 100%;
-              }
+          mat-form-field > div{
+            // background-color: #000;
+            // .mdc-text-field--filled{
+            //   background-color: #000;
+            // }
+
+            // input{
+            //   color: #fff;
+            // }
+          }
               .parent-input-ctrl{
-                width: 95%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
               }
               .parent-width {
                 width: 88%;
@@ -23,7 +36,6 @@
 
               .sub-categories{
                 margin-bottom: 2rem;
-                width: 100%;
 
                 .child{
                     
@@ -31,7 +43,6 @@
                       display: flex;
                       justify-content: end;
                       align-items: center;
-                      padding-right: 1.2rem;
                     }
                     .child-width{
                       width:70%;
@@ -41,10 +52,11 @@
                   .btnctrl{
                     display: flex;
                     justify-content: end;
-                    padding-right: 1.2rem;
+                    // width: 88%;
+                    padding-left: 1.5rem;
   
                     button{
-                        width: 77.5%;
+                        width: 80%;
                     }
                   }
                 }
