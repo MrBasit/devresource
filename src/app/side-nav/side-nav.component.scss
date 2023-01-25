@@ -1,9 +1,10 @@
 #side-nav{
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - calc(79px + 30px));
-  .add-resources{
-    display: none;
+  height: 100%;
+
+  .controls{
+    .add-resources{
+      display: none;
+    }
   }
   
   .input-control{
@@ -27,7 +28,12 @@
   .side-nav-container{
     margin: 20px 0;
     padding: 0 20px 0 30px;
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
     .upper{
+      overflow: auto;
       > :first-child{
         margin-bottom: 2rem;
       }
@@ -93,9 +99,6 @@
 
   // add this class conditionally
 
-  
-
-
   mat-tree{
     background-color: #0D0E12;
 
@@ -107,14 +110,14 @@
     }
   }
 
-  @media screen and (max-width: 768px) and (min-width: 280px){
-    #side-nav{
-        .close{
-          display: flex;
-          justify-content: end;
-        }
-      }
-}
+//   @media screen and (max-width: 768px) and (min-width: 280px){
+//     #side-nav{
+//         .close{
+//           display: flex;
+//           justify-content: end;
+//         }
+//       }
+// }
 
 @media screen and (max-width: 768px) and (min-width: 280px){
   #side-nav{
@@ -122,12 +125,15 @@
     flex-direction: column;
     width: 100%;
     padding-top: 50px;
+    // height: 0;
 
+    .controls{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 210px;
     .add-resources{
       display: flex;
-      flex-direction: column;
-      padding-left: 20px;
-      gap: 1rem;
       a{
         width: 250px;
         height: 2.5rem;
@@ -145,13 +151,15 @@
     .input-control{
       display: flex;
       flex-direction: column;
-      padding: 30px 0 0 20px;
+      padding: 0;
+    }
+    
+
     }
 
     .side-nav-container{
-      padding: 0 0 0 20px;
-      min-height: 0;
-      overflow: auto;
+      padding: 0;
+      height: 0;
     }
   }
   }

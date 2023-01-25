@@ -26,14 +26,16 @@ export class NavBarComponent implements OnInit {
   }
 
   openDialog2(){
+    
     const dialog = this.dialog.open(ManagewebsiteComponent, {
-      width: '35%',
-      data: this.dialogData
+      data: this.dialogData,
+      width: '35vw'
     });
   }
 
   OpenSideNav(){
     this.services.isOpenSiveNav$.next(!this.isOpen);
+    console.log("navbar")
   }
   
 

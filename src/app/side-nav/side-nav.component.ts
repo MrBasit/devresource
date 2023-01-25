@@ -1,12 +1,11 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import '../modals/categories';
 import { FilterqueryService } from '../services/filterquery.service';
-// import {MatTreeNestedDataSource} from '@angular/material/tree';
-// import {NestedTreeControl} from '@angular/cdk/tree';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
-import { devOnlyGuardedExpression } from '@angular/compiler';
-import { MatCardTitleGroup } from '@angular/material/card';
+import { MatDialog } from '@angular/material/dialog';
+import { NewwebsiteComponent } from '../dialogform/newwebsite/newwebsite.component';
+import { ManagewebsiteComponent } from '../dialogform/managewebsite/managewebsite.component';
 @Component({
   selector: 'side-nav',
   templateUrl: './side-nav.component.html',
@@ -15,9 +14,14 @@ import { MatCardTitleGroup } from '@angular/material/card';
 
 export class SideNavComponent implements AfterViewInit, OnInit{
 
-  @ViewChild('InputCtrl') inputElement!: HTMLInputElement;
- 
   apis;
+
+  dialogData!: DevResources[];
+
+  @ViewChild('InputCtrl') inputElement!: ElementRef;
+  @ViewChild('ctrlsearch') search!: ElementRef;
+  @ViewChild('sidenav') sidenav!: ElementRef;
+  @Output() sidenavigation: EventEmitter<boolean> = new EventEmitter();
 
   private _transformer = (node: DevResources, level: number) => {
     return {
@@ -43,27 +47,55 @@ export class SideNavComponent implements AfterViewInit, OnInit{
   hasChild = (_: number, node: NodeTree) => node.expandable;
 
 
-  constructor(private services: FilterqueryService){
+  constructor(private services: FilterqueryService, private dialog: MatDialog){
     this.apis = APIs;
     this.dataSource.data =  categories;
     
   }
 
   ngOnInit(): void {
+    this.services.categoriesDataSource$.subscribe(res => {
+      this.dialogData = res;
+    })
     this.services.setCategories(categories)
     this.services.setAPI(APIs)
    }
 
   ngAfterViewInit(): void {
     console.log(this.inputElement)
+    console.log(this.search)
     this.services.categoriesDataSource$.subscribe(x => console.log(x));
   }
 
   filter(query: string){
-    this.services.setQuery(query);
+    if(this.search.nativeElement.className == 'search' && this.inputElement.nativeElement.value != ""){
+      this.sidenavigation.emit();
+      this.services.setQuery(query);
+      this.inputElement.nativeElement.value = "";
+    }
+    else{
+      if( this.inputElement.nativeElement.value != ""){
+        this.services.setQuery(query);
+        this.inputElement.nativeElement.value = "";
+
+      }
+
+    }
+    
   }
   childClick(nodeName:string){
     this.filter(nodeName);
+  }
+
+  openAddPopUp(){
+    this.dialog.open(NewwebsiteComponent)
+  }
+
+  openManagePopUp(){
+
+    this.dialog.open(ManagewebsiteComponent, {
+      data : this.dialogData
+    })
   }
   
 }

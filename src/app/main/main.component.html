@@ -5,7 +5,7 @@
             <div class="header">
                 <mat-icon (click)="close()">close</mat-icon>
             </div>
-            <side-nav></side-nav>
+            <side-nav (sidenavigation)="hideSideNav()"></side-nav>
         </div>
         <div class="categories">
             <home *ngIf="query == null"></home>

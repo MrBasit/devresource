@@ -1,12 +1,21 @@
-<div id="side-nav">
+<div id="side-nav" #sidenav>
   
+  <div class="controls">
     <div class="add-resources">
-      <a href="https://devresourc.es/add-resource">Add resources</a>
+      <a (click)="openAddPopUp()">Add resources</a>
+    </div>
+    <div class="add-resources">
+      <a (click)="openManagePopUp()">Manage</a>
     </div>
     <div class="input-control">
       <input type="text" placeholder="Search" class="ctrl-input" 
       #InputCtrl (keydown.enter)="filter(InputCtrl.value)">
     </div>
+    <div class="add-resources">
+      <a (click)="filter(InputCtrl.value)" #ctrlsearch class="search">search</a>
+    </div>
+
+  </div>
   <div class="side-nav-container">
     <div class="upper" style="color: #fff">
       <div *ngFor="let item of apis">

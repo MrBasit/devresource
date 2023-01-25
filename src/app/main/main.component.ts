@@ -10,18 +10,16 @@ export class MainComponent implements OnInit, AfterViewInit {
   isOpen: boolean;
 
   @ViewChild("sidenav",{static: false, read: ElementRef}) sideNav;
+
   constructor(private service: FilterqueryService){
     this.service.query$.subscribe(x => {
       this.query = x as string;
-      console.log(x)
     })
   }
  
   ngOnInit(): void {
-
-    this.service.isOpenSiveNav$.subscribe((val: boolean) => {
+     this.service.isOpenSiveNav$.subscribe((val: boolean) => {
       this.isOpen = val;
-      console.log(this.isOpen)
      })
   }
 
@@ -30,10 +28,14 @@ export class MainComponent implements OnInit, AfterViewInit {
    }
 
   close(){
-    console.log("click")
     this.sideNav.nativeElement.classList.remove('display-side-nav');
     this.service.isOpenSiveNav$.next(false);
 
+  }
+
+  hideSideNav(){
+    this.sideNav.nativeElement.classList.remove('display-side-nav');
+    this.service.isOpenSiveNav$.next(false);
   }
 
 }

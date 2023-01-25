@@ -14,6 +14,9 @@
             margin-right: 50px;
             side-nav{
                 position: fixed;
+                display: flex;
+                flex-direction: column;
+                height: calc(100vh - calc(80px + 30px));
             }
         }
       }
@@ -34,7 +37,7 @@
                 .header{
                     display: flex;
                     justify-content: end;
-                    padding-right: 2rem;
+                    padding-right: 3rem;
 
                     mat-icon{
                         color: #fff;
@@ -55,7 +58,7 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                padding-inline-start:1rem;
+                padding-inline-start:2rem;
                 padding-inline-end: 1rem;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
