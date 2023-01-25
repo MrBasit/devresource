@@ -1,22 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
-// @import "../node_modules/@angular/material/theming";
+@import "../node_modules/@angular/material/theming";
+@include mat-core();
 
-// @include mat-core();
+$my-primary: mat-palette($mat-blue,900,200,500);
+$my-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-warn: mat-palette($mat-red, 800);
+$dialog-light-theme: mat-light-theme($my-primary,$my-accent, $my-warn);
+$dialog-dark-theme: mat-dark-theme($my-primary,$my-accent,$my-warn);
 
-// // $mat-primary: #16191d;
+.light-theme{
+    // @include angular-material-theme($dialog-theme);
+}
 
-// $my-primary: mat-palette($mat-grey, 800);
-// $dialog-theme: mat-light-theme($my-primary);
 
-// @include angular-material-theme($dialog-theme);
-
-// .dark-theme{
-//     // $my-orange: mat-pallete($mat-deep-orange, 800);  
-//     // $dialog-orange: mat-light-theme($my-orange);
-//     @include angular-material-theme($dark-theme);
-// }
+.dark-theme{
+    @include angular-material-theme($dialog-dark-theme);
+    background-color:#0D0E12;
+}
 
 
 :root{
