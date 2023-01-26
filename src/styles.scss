@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 @import "../node_modules/@angular/material/theming";
@@ -28,10 +30,10 @@ $dialog-dark-theme: mat-dark-theme($my-primary,$my-accent,$my-warn);
 html, body { height: 100%;}
 body { margin: 0; }
 
-a, h1, h2, h3, p, strong{
+a, h1, h2, h3, p, strong, button, span{
     text-decoration: none;
     color: #fff;
-    font-family: Roboto Mono, system-ui, sans-serif;
+    font-family: "Roboto Mono", system-ui, sans-serif;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

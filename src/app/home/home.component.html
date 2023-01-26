@@ -1,13 +1,14 @@
 <div id="home">
     <div class="home-container">
         <div class="categories">
+            <p class="latest">Latest</p>
             <div class="category" *ngFor="let item of sortedData">
                 <!-- <h1>{{i.date | date:'d LLLL' }}</h1> -->
-                <h1>{{item[0].date | date:'d LLLL y' }}</h1>
+                <h1>{{item[0].date | date:'d LLLL' }}</h1>
                 <ul>
                     <li *ngFor="let i of item">
                         <mat-card>
-                            <img style="border-radius: 1rem;" 
+                            <img 
                             mat-card-image src='{{i.image}}' alt="Photo of a Shiba Inu">
                             
                             <mat-card-content>

@@ -34,18 +34,17 @@
                 
                 li{
                     width: 30%;
-                        // margin-bottom: 3rem;
-                        // display: grid;
-                        // grid-gap: 1.5rem;
-                        // grid-template-columns: 1fr 1fr 1fr;
-                        padding: 0;
+                    padding: 0;
                         mat-card{
                             background-color: #16191d;
                             border: 2px solid #202328;
                             padding: 8px 8px 0;
                             background-color: #16191d;
                             border: 2px solid #202328;
-                            border-radius: 1rem;
+                            border-radius: 1.25rem;
+                            img{
+                                border-radius: 0.75rem;
+                            }
                         }
                         mat-card-content{
     

@@ -17,14 +17,22 @@ mat-toolbar{
             display: flex;
             gap: 2rem;
             flex: auto;
+
+            .dev-resource{
+                strong{
+                    word-spacing: -5px;
+                }
+            }
         }
         .nav-bar-right{
             display: flex;
             gap: 2rem;
 
             .btn-add-resources{
+                border-radius: .5rem;
                 strong{
                     text-transform: uppercase;
+                    word-spacing: -5px;
                 }
             }
         }
