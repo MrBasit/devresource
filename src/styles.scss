@@ -22,6 +22,14 @@ $dialog-dark-theme: mat-dark-theme($my-primary,$my-accent,$my-warn);
     background-color:#0D0E12;
 }
 
+.dark-theme2{
+     @include angular-material-theme($dialog-dark-theme);
+    background-color:#16191d;
+}
+
+
+
+
 
 :root{
     font-family: Roboto Mono, system-ui, sans-serif;
@@ -39,10 +47,10 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-@media screen{
-    @import './responsive/Desktop.scss';
-    @import './responsive/Tablet.scss';
-    @import './responsive/Mobile.scss';
+// @media screen{
+//     @import './responsive/Desktop.scss';
+//     @import './responsive/Tablet.scss';
+//     @import './responsive/Mobile.scss';
 
-}
+// }
 

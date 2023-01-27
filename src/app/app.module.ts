@@ -25,6 +25,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import { ManagewebsiteComponent } from './dialogform/managewebsite/managewebsite.component';
 import {MatSelectModule} from '@angular/material/select';
+import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +56,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule
     
   ],
   providers: [],

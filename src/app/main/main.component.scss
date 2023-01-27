@@ -34,14 +34,22 @@
                 max-width: 0px;   
                 height: 0px;
                 margin-right: 0px;
+
+                
                 .header{
                     display: flex;
                     justify-content: end;
-                    padding-right: 3rem;
+                    padding-right: 1rem;
 
                     mat-icon{
                         color: #fff;
                     }
+                }
+
+                side-nav{
+                    position: absolute;
+                    overflow: auto;
+                    width: 90%;
                 }
                 
             }
@@ -58,8 +66,6 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                padding-inline-start:2rem;
-                padding-inline-end: 1rem;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
                 z-index: 100;

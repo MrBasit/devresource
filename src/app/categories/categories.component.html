@@ -29,7 +29,11 @@
                                 
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <mat-icon>more_horiz</mat-icon>
+                                    <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
+                                <mat-menu #menu="matMenu" class="dark-theme2">
+                                    <a href="https://github.com/marcelscruz/dev-resources" mat-menu-item class="dark-theme3"><mat-icon> create </mat-icon>Edit</a>
+                                    <a mat-menu-item><mat-icon> warning </mat-icon>Report</a>
+                                </mat-menu>
                                 </mat-card-actions>
                               </mat-card>
                 </li>

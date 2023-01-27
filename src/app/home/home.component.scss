@@ -60,7 +60,6 @@
             
                             h2{
                                 font-weight: 600;
-                                // font-family: "Roboto Mono", system-ui, sans-serif;
                                 font-size: 16px;
                                 word-spacing: -5px;
                                 text-transform: none;
@@ -69,7 +68,6 @@
             
                             span{
                                 display: block;
-                                // font-family: "Roboto Mono", system-ui, sans-serif;
                                 font-weight: 700;
                                 text-transform: uppercase;
                                 font-size: 11px;
@@ -114,6 +112,30 @@
                         display: flex;
                         justify-content: end;
                         visibility: hidden;
+
+                        mat-icon{
+                            cursor: pointer;
+                        }
+
+                        mat-menu{
+
+                            mat-icon{
+                                color:#8E96A4;
+
+                            }
+                            a{
+                                text-decoration: none;
+                                outline: 2px solid transparent;
+                                outline-offset: 2px;
+                                color:#8E96A4;
+                                font-family: "Roboto Mono",system-ui,sans-serif;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                letter-spacing: 1.2px;
+                                word-spacing: -3px;
+                            }
+                        }
                         
                     }
                 }

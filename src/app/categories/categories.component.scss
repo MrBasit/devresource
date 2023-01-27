@@ -26,85 +26,83 @@
             }
         }
         .list{
-            ul{
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                padding: 0;
-                
-                li{
-                    width: 30%;
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 2rem;
                     padding: 0;
-                        mat-card{
-                            background-color: #16191d;
-                            border: 2px solid #202328;
-                            padding: 8px 8px 0;
-                            background-color: #16191d;
-                            border: 2px solid #202328;
-                            border-radius: 1.25rem;
-                            img{
-                                border-radius: 0.75rem;
+                    
+                    li{
+                        width: 30%;
+                        padding: 0;
+                            mat-card{
+                                background-color: #16191d;
+                                border: 2px solid #202328;
+                                padding: 8px 8px 0;
+                                background-color: #16191d;
+                                border: 2px solid #202328;
+                                border-radius: 1.25rem;
+                                img{
+                                    border-radius: 0.75rem;
+                                }
                             }
-                        }
-                        mat-card-content{
-    
-                            padding: 0;
-                            .card-content{
-                                padding: 1rem 12px 0px 12px;
-    
+                            mat-card-content{
+        
+                                padding: 0;
+                                .card-content{
+                                    padding: 1rem 12px 0px 12px;
+        
+                                    h2{
+                                        font-weight: 600;
+                                        font-size: 16px;
+                                        word-spacing: -5px;
+                                        letter-spacing: 0;
+                                        line-height: 1.5;
+                                    }
+        
+                                    span{
+                                        margin-bottom: 12px;
+                                        font-size: 11px;
+                                        font-weight: 700;
+                                        text-transform: uppercase;
+                                        letter-spacing: 1px;
+                                        color:#8E96A4;
+                                    }
+                                }
+                                
+        
                                 h2{
-                                    font-weight: 600;
+                                    margin: 0;
                                     font-size: 16px;
-                                    word-spacing: -5px;
-                                    letter-spacing: 0;
-                                    line-height: 1.5;
+                                    font-weight: 600;
+                                    
                                 }
-    
-                                span{
-                                    margin-bottom: 12px;
-                                    font-size: 11px;
-                                    font-weight: 700;
-                                    text-transform: uppercase;
-                                    letter-spacing: 1px;
-                                    color:#8E96A4;
+        
+                                .discription{
+                                    font-size: 14px;
+                                    margin-top: 10px;
                                 }
                             }
-                            
-    
-                            h2{
-                                margin: 0;
-                                font-size: 16px;
-                                font-weight: 600;
+        
+        
+                            mat-card-actions{
+                                display: flex;
+                                justify-content: end;
+                                visibility: hidden;
                                 
                             }
-    
-                            .discription{
-                                font-size: 14px;
-                                margin-top: 10px;
-                            }
-                        }
-    
-    
-                        mat-card-actions{
-                            display: flex;
-                            justify-content: end;
-                            visibility: hidden;
-                            
+                    }
+                    li:hover{
+                        mat-icon{
+                            visibility: visible;
+                            color: #8E96A4;
                         }
                     }
                 }
-
                 margin: 0;
                 padding: 0;
 
-                
-
-                .card:hover{
-                    mat-icon{
-                        visibility: visible;
-                        color: #8E96A4;
-                    }
-                }
+                    
 
                
             }
