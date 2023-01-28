@@ -1,12 +1,7 @@
 <div id="side-nav" #sidenav>
   
   <div class="controls">
-    <div class="add-resources">
-      <a (click)="openAddPopUp()">Add resources</a>
-    </div>
-    <div class="add-resources">
-      <a (click)="openManagePopUp()">Manage</a>
-    </div>
+    
     <div class="input-control">
       <mat-icon>search</mat-icon>
       <input type="text" placeholder="Search" class="ctrl-input" 
@@ -14,6 +9,12 @@
     </div>
     <div class="add-resources">
       <a (click)="filter(InputCtrl.value)" #ctrlsearch class="search">search</a>
+    </div>
+    <div class="add-resources">
+      <a (click)="openAddPopUp()">Add resources</a>
+    </div>
+    <div class="add-resources">
+      <a (click)="openManagePopUp()">Manage</a>
     </div>
 
   </div>

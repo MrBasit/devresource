@@ -68,27 +68,21 @@ export class SideNavComponent implements AfterViewInit, OnInit{
   }
 
   filter(query: string){
-    if(this.search.nativeElement.className == 'search' && this.inputElement.nativeElement.value != ""){
-      this.sidenavigation.emit();
-      this.services.setQuery(query);
-      this.inputElement.nativeElement.value = "";
-    }
-    else{
-      if( this.inputElement.nativeElement.value != ""){
+    if(query != ""){
+        this.sidenavigation.emit();
         this.services.setQuery(query);
         this.inputElement.nativeElement.value = "";
-
-      }
-
     }
-    
   }
+
   childClick(nodeName:string){
     this.filter(nodeName);
   }
 
   openAddPopUp(){
     this.dialog.open(NewwebsiteComponent)
+    this.sidenavigation.emit();
+
   }
 
   openManagePopUp(){
@@ -96,6 +90,7 @@ export class SideNavComponent implements AfterViewInit, OnInit{
     this.dialog.open(ManagewebsiteComponent, {
       data : this.dialogData
     })
+    this.sidenavigation.emit();
   }
   
 }
