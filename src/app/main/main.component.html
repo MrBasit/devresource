@@ -1,15 +1,18 @@
 <div id="main">
     <div class="main-container">
-        <div class="side-nav" [ngClass]="{'display-side-nav': isOpen, ' min-max-width': isOpen}" #sidenav>
-        <!-- [style.width]="true ? '100%' : '' " -->
-            <div class="header">
-                <mat-icon (click)="close()">close</mat-icon>
+                <div class="side-nav" [ngClass]="{'display-side-nav': isOpen, 'min-max-width': isOpen}" #sidenav>
+                    <div class="header">
+                        <mat-icon (click)="close()">close</mat-icon>
+                    </div>
+                    <side-nav (sidenavigation)="hideSideNav()"></side-nav>
+
+                </div>
+
+            <div class="categories">
+                <home *ngIf="query == null"></home>
+                <categories *ngIf="query != null"></categories>
             </div>
-            <side-nav (sidenavigation)="hideSideNav()"></side-nav>
-        </div>
-        <div class="categories">
-            <home *ngIf="query == null"></home>
-            <categories *ngIf="query != null"></categories>
-        </div>
+                
+            
     </div>
 </div>

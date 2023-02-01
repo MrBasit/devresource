@@ -57,6 +57,10 @@
                 max-width: 100%;
                 width: 100%;
             }
+            .side-nav-show{
+                display: flex;
+                height: 100vh;
+            }
             .display-side-nav{
                 display: flex;
                 flex-direction: column;

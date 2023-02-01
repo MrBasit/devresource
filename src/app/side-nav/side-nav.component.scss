@@ -9,9 +9,7 @@
   }
   
   .input-control{
-
-    // padding: 30px 20px 20px 30px;
-    padding: .8rem 1.2rem;
+    padding: .65rem 1.2rem;
     border: none;
     border-radius: .5rem;
     background-color: #202328;
@@ -19,6 +17,7 @@
     display: flex;
     width: 80%;
     padding-right: 0;
+    margin-bottom: 47px;
 
     mat-icon{
       font-size: 1.75rem;
@@ -53,8 +52,9 @@
     height: 90%;
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
     .upper{
-      overflow: auto;
+      // overflow: auto;
       > :first-child{
         margin-bottom: 2rem;
       }
@@ -116,8 +116,10 @@
       }
       span{
         color: #E1E6F0;
-        font-size: 14px;
         font-weight: 700;
+        display: inline;
+        font-size: 21px;
+        margin-bottom: 5px;
       }
     }
   }
@@ -131,14 +133,15 @@
     mat-tree-node{
       font-size: 14px;
       color: #8E96A4 !important;
-      min-height: 30px !important;
+      min-height: 25px !important;
       margin-right: 5px;
       font-family: "Roboto Mono", system-ui, sans-serif;
       font-weight: 600;
       line-height: 1.5;
       letter-spacing: 0.00938em;
       word-spacing: -3px!important;
-      // height: 1rem;
+      height: 10px;
+      padding: 0.3rem 0rem;
 
       span{
         color: #8E96A4 !important;
@@ -166,10 +169,11 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 210px;
+    width: 100%;
     .add-resources{
       display: flex;
       a{
-        width: 250px;
+        width: 274px;
         height: 2.5rem;
         display: inline-flex;
         align-items: center;
@@ -180,22 +184,26 @@
         word-spacing: -3px;
         border-width: 1px;
         border-style: solid;
+        font-size: 12px;
+        font-weight: 700;
       }
     }
     .input-control{
-      // display: flex;
-      // flex-direction: column;
-      // padding: 0;
-      width: 235px;
+      width: 256px;
+      margin-bottom: 0;
     }
     
 
     }
 
     .side-nav-container{
-      
+      height: 0;
+      overflow: inherit;
       .upper{
         overflow: inherit;
+      }
+      .lower{
+        padding-bottom: 50px;
       }
     }
   }

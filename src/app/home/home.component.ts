@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { AllCardContent,FilterqueryService } from '../services/filterquery.service';
 
 @Component({
@@ -8,7 +8,9 @@ import { AllCardContent,FilterqueryService } from '../services/filterquery.servi
 })
 export class HomeComponent {
 
+ @ViewChild("menu") menu: ElementRef;
  
+ isEdit: boolean;
   dataSource:Card[]=[];
   sortedData=[];
   constructor(private service: FilterqueryService){
@@ -27,6 +29,20 @@ export class HomeComponent {
         this.dataSource.splice(this.dataSource.indexOf(e),1);
       });
     }
+  }
+
+  Edit(){
+    console.log(this.menu);
+    this.isEdit = !this.isEdit;
+
+    if(this.isEdit){
+      this.menu.nativeElement.style.visibility = 'visible';
+
+    }
+    else{
+      this.menu.nativeElement.style.visibility = 'hidden';
+    }
+
   }
 
 }

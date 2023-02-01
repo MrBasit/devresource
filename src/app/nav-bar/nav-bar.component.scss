@@ -30,9 +30,11 @@ mat-toolbar{
 
             .btn-add-resources{
                 border-radius: .5rem;
-                strong{
+                a{
                     text-transform: uppercase;
                     word-spacing: -5px;
+                    font-weight: 700;
+                    font-size: 12px;
                 }
             }
 

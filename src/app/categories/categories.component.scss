@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: 7rem;
     .categories-container{
+        padding-inline-end: 30px;
         .categories-heading{
             margin-bottom: 40px;
             h1{
@@ -29,11 +30,12 @@
                 ul{
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 2rem;
+                    gap: 1rem;
                     padding: 0;
+                    justify-content: space-between;
                     
                     li{
-                        width: 30%;
+                        width: 32.1%;
                         padding: 0;
                             mat-card{
                                 background-color: #16191d;
@@ -99,6 +101,22 @@
                                 display: flex;
                                 justify-content: end;
                                 visibility: hidden;
+
+                              mat-menu {
+                                a{
+                                    span{
+                                        
+
+                                    }
+
+                                    mat-icon{
+                                        margin: 0 !important;
+                                        font-size: 18px;
+
+                                    }
+                                }
+
+                              }
                                 
                             }
                     }
@@ -142,10 +160,10 @@
                 ul{
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 2rem;
-                    justify-content: space-between;
+                    gap: 1rem;
+                    justify-content: space-around;
                     li{
-                        width: 47%;                        
+                        width: 48%;                        
                         // .card-container{
                         //     display: grid;
                         //     grid-gap: 1.5rem;
@@ -173,8 +191,8 @@
                ul{
                 display: flex;
                     flex-wrap: wrap;
-                    gap: 2rem;
-                    justify-content: space-between;
+                    gap: 1rem;
+                    // justify-content: space-between;
                 li{
                     width: 100%; 
                     // .card-container{
@@ -202,10 +220,10 @@
                 ul{
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 2rem;
-                    justify-content: space-between;
+                    gap: 1rem;
+                    justify-content: space-around;
                     li{
-                        width: 47%; 
+                        width: 48%; 
 
                         // display: grid;
                         // grid-gap: 1.5rem;
@@ -230,7 +248,7 @@
                     display: flex;
                     flex-wrap: wrap;
                     gap: 2rem;
-                    justify-content: space-between;
+                    // justify-content: ss;
                     li{
                         width: 100%; 
 
