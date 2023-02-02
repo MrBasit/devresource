@@ -6,8 +6,8 @@
 @import "../node_modules/@angular/material/theming";
 @include mat-core();
 
-$my-primary: mat-palette($mat-blue,900,200,500);
-$my-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-primary: mat-palette($mat-gray,50);
+$my-accent: mat-palette($mat-blue, 800);
 $my-warn: mat-palette($mat-red, 800);
 $dialog-light-theme: mat-light-theme($my-primary,$my-accent, $my-warn);
 $dialog-dark-theme: mat-dark-theme($my-primary,$my-accent,$my-warn);

@@ -8,7 +8,7 @@
                         <div class="categories">
                             <div class="parent-input-ctrl">
                                 <mat-icon>view_headline</mat-icon>
-                                <mat-form-field class="parent-width">
+                                <mat-form-field class="parent-width" appearance="outline">
                                    <input matInput value="{{source.name}}">
                                </mat-form-field>
                                <mat-icon>delete</mat-icon>
@@ -20,7 +20,7 @@
                             <div class="child" *ngFor="let item of source.categories">
                                 <div class="child-input-ctrl" *ngIf="source.categories!.indexOf(item) < 2">
                                     <mat-icon>view_headline</mat-icon>
-                                    <mat-form-field class="child-width">
+                                    <mat-form-field class="child-width" appearance="outline">
                                            <input matInput value="{{item.name}}">
                                     </mat-form-field>
                                     <mat-icon>delete</mat-icon>
@@ -28,7 +28,7 @@
                                 
                             </div>
                             <div class="btnctrl">
-                                    <button mat-dialog-close="true" mat-raised-button  mat-button cdkFocusInitial color="primary">New</button>
+                                    <button mat-dialog-close="true" mat-raised-button  mat-button cdkFocusInitial color="accent">New</button>
 
                                
         
@@ -38,12 +38,12 @@
                     </div>
                 </div>
     
-                <button class="add-new-ctrl" mat-dialog-close="true" mat-raised-button  mat-button cdkFocusInitial color="primary">Add New</button>
+                <button class="add-new-ctrl" mat-dialog-close="true" mat-raised-button  mat-button cdkFocusInitial color="accent">Add New</button>
             </form>
             
         </mat-dialog-content>
         <mat-dialog-actions align="center">
-            <button mat-dialog-close="true" mat-raised-button  mat-button cdkFocusInitial color="primary">Save</button>
+            <button mat-dialog-close="true" mat-raised-button  mat-button cdkFocusInitial color="accenet">Save</button>
         </mat-dialog-actions>
     </div>
 </div>
