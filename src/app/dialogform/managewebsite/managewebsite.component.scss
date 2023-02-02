@@ -3,25 +3,33 @@
     .dialog-container{
         padding: 1rem;
         h1{
+          font-family: "Roboto Mono", system-ui, sans-serif;
+          font-size: 16px;
+          margin-bottom: 5px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1.4px;
+          color: #8E96A4;
+          word-spacing: -4px;
           display: flex;
           justify-content: center;
-            color: #fff;
-            font-weight: 600;
         }
 
         mat-dialog-content{
-          // width: 100%;
           mat-icon{
             color: #9ea3ab;
+            padding-top: 1.1rem;
+          }
+          input{
+            color: #9ea3ab;
+            font-family: "Roboto Mono", system-ui, sans-serif;
           }
               .parent-input-ctrl{
                 display: flex;
-                align-items: center;
                 justify-content: end;
               }
               .parent-width {
                 width: 88%;
-                // width: 100%;
               }
               
 
@@ -32,19 +40,17 @@
                     
                     .child-input-ctrl{
                       display: flex;
+                      // align-items: center;
                       justify-content: end;
-                      align-items: center;
                     }
                     .child-width{
                       width:70%;
-                      // width: 100%;
                     }
                   }
                   
                   .btnctrl{
                     display: flex;
                     justify-content: end;
-                    // width: 88%;
                     padding-left: 1.5rem;
   
                     button{

@@ -19,11 +19,11 @@
                             
                             <div class="child" *ngFor="let item of source.categories">
                                 <div class="child-input-ctrl" *ngIf="source.categories!.indexOf(item) < 2">
-                                        <mat-icon>view_headline</mat-icon>
-                                        <mat-form-field class="child-width">
+                                    <mat-icon>view_headline</mat-icon>
+                                    <mat-form-field class="child-width">
                                            <input matInput value="{{item.name}}">
-                                       </mat-form-field>
-                                       <mat-icon>delete</mat-icon>
+                                    </mat-form-field>
+                                    <mat-icon>delete</mat-icon>
                                 </div>
                                 
                             </div>

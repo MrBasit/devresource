@@ -20,6 +20,7 @@ $dialog-dark-theme: mat-dark-theme($my-primary,$my-accent,$my-warn);
 .dark-theme{
     @include angular-material-theme($dialog-dark-theme);
     background-color:#0D0E12;
+    // background-color: #202328;
 }
 
 .dark-theme2{
@@ -45,12 +46,4 @@ a, h1, h2, h3, p, strong, button, span{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
-// @media screen{
-//     @import './responsive/Desktop.scss';
-//     @import './responsive/Tablet.scss';
-//     @import './responsive/Mobile.scss';
-
-// }
 
