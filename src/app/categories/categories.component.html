@@ -10,6 +10,7 @@
         <div class="list">
             <ul>
                 <li *ngFor="let card of filteredCategories">
+                    
                             <mat-card>
                                 <img 
                                 mat-card-image src='{{card.image}}' alt="Photo of a Shiba Inu">
@@ -57,9 +58,17 @@
                                 </mat-menu>
                                 </mat-card-actions>
                               </mat-card>
+
+                             
                 </li>
             </ul>
         </div>
+
+            <mat-card *ngIf="filteredCategories.length == 0" class="not-found">
+              <mat-card-content>type not found</mat-card-content>
+            </mat-card>
+
+        
 
     </div>
 </div>
