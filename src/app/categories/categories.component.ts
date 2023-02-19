@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { HomeComponent } from '../home/home.component';
 import '../modals/categories';
 import { AllCardContent ,FilterqueryService } from '../services/filterquery.service';
 @Component({
@@ -15,25 +14,30 @@ export class CategoriesComponent implements OnInit{
   filteredCategories?: Card[];
   aa = "any";
 
+  spinner: boolean = false;
+
   constructor(private queryService: FilterqueryService, private dialog: MatDialog ){
     this.cardContent = AllCardContent;
+
   }
 
   ngOnInit(): void {
-    this.filter();
-    this.filteredCategories =  this.cardContent.filter(val => {   
-        return val.type?.toLowerCase() == this.queryService.queryText.toLowerCase();
-      }
-    );
-    
+      
+    setTimeout(() => {
+      this.spinner = true;
+      this.filter();
+      this.filteredCategories =  this.cardContent.filter(val => {   
+            return val.type?.toLowerCase() == this.queryService.queryText.toLowerCase();
+          }
+        );
+    }, 2000);
   }
-
+  
   filter(){
-    this.queryService.query$.subscribe((query: any) => {
-
-    this.filteredCategories =  this.cardContent.filter(val=> { 
-       return val.type?.toLowerCase() == query.toLowerCase();
-    });
-    })
+      this.queryService.query$.subscribe((query: any) => {
+        this.filteredCategories =  this.cardContent.filter(val=> { 
+         return val.type?.toLowerCase() == query.toLowerCase();
+      });
+      })
   }
 }

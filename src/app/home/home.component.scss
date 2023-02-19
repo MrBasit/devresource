@@ -1,6 +1,16 @@
 #home{
     .categories{
         padding-inline-end: 30px;
+        position: relative;
+        mat-spinner{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 100;
+            /* top: 20%; */
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
        .latest{
         font-family: "Roboto Mono",system-ui,sans-serif;
         font-weight: 700;

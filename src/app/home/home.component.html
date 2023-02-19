@@ -1,7 +1,8 @@
 <div id="home">
     <div class="home-container">
         <div class="categories">
-            <p class="latest">Latest</p>
+            <mat-spinner *ngIf="!spinner" color="accent"></mat-spinner>
+            <p class="latest" *ngIf="spinner">Latest</p>
             <div class="category" *ngFor="let item of sortedData">
                 <!-- <h1>{{i.date | date:'d LLLL' }}</h1> -->
                 <p>{{item[0].date | date:'d LLLL' }}</p>

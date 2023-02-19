@@ -26,6 +26,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ManagewebsiteComponent } from './dialogform/managewebsite/managewebsite.component';
 import {MatSelectModule} from '@angular/material/select';
 import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,8 @@ import {matMenuAnimations, MatMenuModule} from '@angular/material/menu';
     ReactiveFormsModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
     
   ],
   providers: [],

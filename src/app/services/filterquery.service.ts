@@ -38,7 +38,7 @@ export let AllCardContent:Card[]=[
     date:"2024-07-21"
   },
   {
-    image: 'https://www.shutterstock.com/image-vector/programming-code-coding-hacker-background-260nw-1714491562.jpg',
+    image: 'https://www.shutterstock.com/image-vector/abstract-futuristic-cyberspace-binary-code-matrix-740523562.jpg',
     type: 'fonts',
     path: 'assets/fonts',
     discription: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit Asperiores quod Atque, nobis ducimus error quos commodialias veniam cupiditate consequuntur',
